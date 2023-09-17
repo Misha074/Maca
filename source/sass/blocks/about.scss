@@ -1,0 +1,41 @@
+.about {
+
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12.82%;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.about__column {
+
+  p {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.about__column:first-child {
+  p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.about__column:last-child {
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.about__header {
+  margin-bottom: 43px;
+}
+
+.about__title {
+  margin-bottom: 46px;
+}

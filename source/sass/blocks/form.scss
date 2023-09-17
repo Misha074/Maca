@@ -1,0 +1,27 @@
+.form {
+  color: $color-default-white;
+
+  form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-cerulean-blue;
+    padding: 89px 74px 51px;
+  }
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: 498px auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  border-radius: 16px;
+}
+
+.form__content {
+  position: relative;
+  background-image: url('../img/form-image-desktop.jpg');
+}
+
+.form__header {
+}

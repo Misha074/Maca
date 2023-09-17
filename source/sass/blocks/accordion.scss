@@ -1,0 +1,40 @@
+.accordion {}
+
+.accordion__element {
+  background-color: transparent;
+  border: 2px solid $color-cerulean-blue;
+  border-radius: 16px;
+  width: 100%;
+
+}
+
+.accordion__element + .accordion__element {
+  margin-top: 10px;
+}
+
+.accordion__element.is-active {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+
+  .accordion__button-title {
+    color: $color-default-white;
+  }
+}
+
+.accordion__button {
+  color: $color-cerulean-blue;
+  background-color: transparent;
+  padding: 50px 40px;
+}
+
+.accordion__button-title {
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.accordion__element-icon-wrapper {}
+
+.accordion__content {
+  font-size: 16px;
+  line-height: 26px;
+}

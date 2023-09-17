@@ -1,0 +1,41 @@
+.participate {
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+}
+
+.participate__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12.82%;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.participate__column {
+}
+
+.participate__header {
+  color: $color-default-white;
+  margin-bottom: 42px;
+}
+
+.participate__title {
+  color: $color-default-white;
+  margin-bottom: 46px;
+}
+
+.participate__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.participate__item {
+  padding: 30px 25px;
+  border: 2px solid $color-default-white;
+  border-radius: 20px;
+}
+
+.participate__item + .participate__item {
+  margin-top: 23px;
+}

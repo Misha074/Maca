@@ -1,0 +1,24 @@
+.slide-main {
+  width: 75%;
+  background-color: $color-default-white;
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.slide-main__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  color: $color-cerulean-blue;
+
+  font-size: 54px;
+  line-height: 62px;
+}
+
+.slide-main__row {}
+
+.slide-main__more-link-wrapper {}
+
+.slide-main__more-link {}
