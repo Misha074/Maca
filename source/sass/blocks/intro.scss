@@ -1,0 +1,112 @@
+.intro {
+}
+
+.intro__slide {
+  min-height: 800px;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-size: cover;
+
+  // @include vp-1199 {
+  //   min-height: 1024px;
+  //   padding-top: 174px;
+  // }
+
+  // @include vp-767 {
+  //   min-height: 568px;
+  //   padding-top: 140px;
+  // }
+}
+
+.intro__swiper {
+  font-size: 0;
+}
+
+.intro__swiper-wrapper {
+  list-style-type: none;
+  padding: 0;
+}
+
+.intro__slide {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.intro__slide--1 {
+  background-color: $color-charcoal;
+  background-image: url("../img/intro-slider/background-1-desktop.jpg");
+  background-position: bottom;
+
+  @include retina {
+    background-image: url("../img/intro-slider/background-1-desktop@2x.jpg");
+  }
+
+  // @include vp-1199 {
+  //   background-image: url("../img/header-slider/header-background-1-tablet.webp");
+
+  //   @include retina {
+  //     background-image: url("../img/header-slider/header-background-1-tablet@2x.webp");
+  //   }
+  // }
+
+  // @include vp-767 {
+  //   background-image: url("../img/header-slider/header-background-1-mobile.webp");
+
+  //   @include retina {
+  //     background-image: url("../img/header-slider/header-background-1-mobile@2x.webp");
+  //   }
+  // }
+}
+
+.intro__slide--2 {
+  background-color: $color-charcoal;
+  background-image: url("../img/intro-slider/background-2-desktop.jpg");
+  background-position: bottom;
+
+  @include retina {
+    background-image: url("../img/intro-slider/background-2-desktop@2x.jpg");
+  }
+}
+
+.intro__slide--3 {
+  background-color: $color-charcoal;
+  background-image: url("../img/intro-slider/background-3-desktop.jpg");
+  background-position: bottom;
+
+  @include retina {
+    background-image: url("../img/intro-slider/background-3-desktop@2x.jpg");
+  }
+}
+
+.intro__slide-container {
+  position: relative;
+}
+
+.intro__slide-main {
+}
+
+.intro__slide-mask {
+  background: rgba(49, 109, 194, 0.2);;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.intro__pagination-wrapper {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 30px;
+  background-color: $color-default-white;
+  top: 430px;
+  left: clamp(100px, $padding-desktop, 120px);
+  z-index: 2;
+  border-radius: 20px 20px 0 0;
+}
+
+.intro__slider-pagination {
+}
+
