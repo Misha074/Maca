@@ -23,14 +23,28 @@
 .programs__slide {
 }
 
+.programs__controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .programs__pagination.swiper-pagination {
   bottom: 0;
   top: unset;
+  max-width: 1134px;
 }
 
 .programs__navigation {
 }
+
 .programs__navigation-button {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  color: $color-cerulean-blue;
 }
+
 .programs__navigation-button--prev {
 }

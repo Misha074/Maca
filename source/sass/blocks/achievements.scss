@@ -1,5 +1,4 @@
-.achievements {
-}
+.achievements {}
 
 .achievements__container {
   padding-bottom: 120px;
@@ -34,21 +33,24 @@
     text-transform: uppercase;
   }
 
+  span:last-of-type {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 42px;
+    top: -21px;
+    left: -21px;
+    background-color: #316dc2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
   p {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
     font-weight: 300;
-
   }
-}
-
-.achievements__item::after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  top: 0;
-  left: 0;
-  background-color: tomato;
 }
