@@ -8,6 +8,7 @@
   <meta name="description" content="«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.">
   <title>Маса</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="/source/js/modules/leaflet/leaflet.css"> -->
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-regular.woff" as="font" type="font/woff" crossorigin="">
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-300.woff2" as="font" type="font/woff2" crossorigin="">
@@ -16,7 +17,7 @@
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-500.woff" as="font" type="font/woff" crossorigin="">
 </head>
 
-<body>
+<body id="body">
   <div class="wrapper">
     <header class="header">
       <h1 class="visually-hidden">Проект Маса</h1>
@@ -26,10 +27,64 @@
             <img src="./img/logo.png">
           </a>
         </div>
-        <div class="header__nav nav">
-          <!--тут навигация через аккордеон-->
+        <div class="header__nav nav nav--closed nav--nojs">
+          <button class="nav__toggle nav__toggle--closed nav__toggle--nojs button">
+            <span>Меню</span>
+            <span class="button__circle">
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#icon-burger"></use>
+              </svg>
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#icon-cross"></use>
+              </svg>
+            </span>
+          </button>
+          <ul class="nav__list nav__list--closed nav__list--nojs accordion" data-accordion="parent" data-single="data-single">
+            <li class="nav__item">
+              <a>О проекте</a>
+            </li>
+            <li class="nav__item accordion__element" data-accordion="element">
+              <button class="accordion__button btn" type="button" data-accordion="button">
+                <span class="accordion__button-title">
+                  Программы
+                </span>
+                <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <ul class="accordion__content accordion__content--nojs" data-accordion="content">
+                <li>Стажировки</li>
+                <li>Волонтёрство</li>
+                <li>Учёба</li>
+                <li>Религия</li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a>Как поехать</a>
+            </li>
+            <li class="nav__item">
+              <a>Отзывы</a>
+            </li>
+            <li class="nav__item accordion__element" data-accordion="element">
+              <button class="accordion__button btn" type="button" data-accordion="button">
+                <span class="accordion__button-title">
+                  Новости
+                </span>
+                <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <ul class="accordion__content accordion__content--nojs" data-accordion="content">
+                <li>Новость №1</li>
+                <li>Новость №2</li>
+                <li>Новость №3</li>
+                <li>Новость №4</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="header__untouchable-block"></div>
     </header>
     <main>
       <section class="intro">
@@ -163,21 +218,41 @@
               <li class="achievements__item">
                 <span>Более 250 программ</span>
                 <p>учебных и рабочих,разной длительностью от 3 месяцев до 1 года</p>
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-star"></use>
+                  </svg>
+                </span>
               </li>
 
               <li class="achievements__item">
                 <span>Более 3000 участников</span>
                 <p>уже успешно прошли программу от «Маса» и остались в Израиле</p>
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-star"></use>
+                  </svg>
+                </span>
               </li>
 
               <li class="achievements__item">
                 <span>от 4 200 $ до 8 400 $</span>
                 <p>грант всем участникам для комфортного прохождения программы</p>
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-star"></use>
+                  </svg>
+                </span>
               </li>
 
               <li class="achievements__item">
                 <span>участники из 60 стран</span>
                 <p>студенты со всего мира приезжают на программу «Маса»</p>
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./img/sprite.svg#icon-star"></use>
+                  </svg>
+                </span>
               </li>
             </ul>
           </div>
@@ -293,17 +368,23 @@
                   </div>
                 </li>
               </ul>
-              <div class="programs__pagination-wrapper">
-                <div class="programs__pagination swiper-pagination">
+              <div class="programs__controls-row">
+                <div class="programs__pagination-wrapper">
+                  <div class="programs__pagination swiper-pagination">
+                  </div>
                 </div>
-              </div>
-              <div class="programs__navigation">
-                <button class="programs__navigation-button programs__navigation-button--prev">
-                  Назад
-                </button>
-                <button class="programs__navigation-button programs__navigation-button--next">
-                  Вперёд
-                </button>
+                <div class="programs__navigation">
+                  <button class="programs__navigation-button programs__navigation-button--prev">
+                    <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="./img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </button>
+                  <button class="programs__navigation-button programs__navigation-button--next">
+                    <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="./img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -327,18 +408,22 @@
             <ul class="participate__list">
               <li class="participate__item">
                 Быть в возрасте от 16 до 30 лет
+                <span>1</span>
               </li>
 
               <li class="participate__item">
                 Иметь оконченное среднее образование
+                <span>2</span>
               </li>
 
               <li class="participate__item">
                 Иметь документально подтверждённые еврейские корни и пройти консульскую проверку
+                <span>3</span>
               </li>
 
               <li class="participate__item">
                 За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле
+                <span>4</span>
               </li>
             </ul>
           </div>
@@ -412,7 +497,8 @@
               <div class="news__slider volunteering tabs__element" data-tabs="element">
                 <div class="volunteering__swiper swiper">
                   <ul class="swiper-wrapper volunteering__swiper-wrapper">
-                    <li class="swiper-slide volunteering__slide volunteering__slide--double" tabindex="-1" data-slide-swiper-intro>
+                    <li class="swiper-slide volunteering__slide volunteering__slide--double" tabindex="-1"
+                      data-slide-swiper-intro>
                       <div class="volunteering__slide-image-wrapper">
                         <img src="./img/news-and-materials/common-slider/common-1-desktop.png">
                       </div>
@@ -449,7 +535,8 @@
               <div class="news__slider internship tabs__element" data-tabs="element">
                 <div class="internship__swiper swiper">
                   <ul class="swiper-wrapper internship__swiper-wrapper">
-                    <li class="swiper-slide internship__slide internship__slide--double" tabindex="-1" data-slide-swiper-intro>
+                    <li class="swiper-slide internship__slide internship__slide--double" tabindex="-1"
+                      data-slide-swiper-intro>
                       <div class="internship__slide-image-wrapper">
                         <img src="./img/news-and-materials/common-slider/common-1-desktop.png">
                       </div>
@@ -546,7 +633,9 @@
               </button>
               <div class="accordion__content" data-accordion="content">
                 <p>
-                  Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+                  Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант
+                  «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+                  участия.
                 </p>
               </div>
             </div>
@@ -626,7 +715,9 @@
                       Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
                     </quote>
                     <p>
-                      Я рекомендую программу «Маса» всем израильским студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.
+                      Я рекомендую программу «Маса» всем израильским студентам, желающим получить незабываемые
+                      впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других
+                      программ, и я чувствую огромную благодарность за предоставленную мне возможность.
                     </p>
                   </div>
                 </li>
@@ -655,7 +746,9 @@
                       Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
                     </quote>
                     <p>
-                      Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
+                      Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
+                      рекомендовал эту волонтерскую программу всем, кто ищет значимый и незабываемый опыт. Организация
+                      была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
                     </p>
                   </div>
                 </li>
@@ -684,7 +777,9 @@
                       Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
                     </quote>
                     <p>
-                      Я рекомендую программу «Маса» всем израильским студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.
+                      Я рекомендую программу «Маса» всем израильским студентам, желающим получить незабываемые
+                      впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других
+                      программ, и я чувствую огромную благодарность за предоставленную мне возможность.
                     </p>
                   </div>
                 </li>
@@ -713,7 +808,9 @@
                       Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
                     </quote>
                     <p>
-                      Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
+                      Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
+                      рекомендовал эту волонтерскую программу всем, кто ищет значимый и незабываемый опыт. Организация
+                      была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
                     </p>
                   </div>
                 </li>
@@ -746,7 +843,7 @@
                 <span>Центральный офис</span>
                 <!--Намеренно вставляю br т.к. на всех устройствах перенос стоит именно в этом месте-->
                 <span>г. Новосибирск, ул. Щетинкина 68,<br>
-                   культурный центр «Бейт Менахем»</span>
+                  культурный центр «Бейт Менахем»</span>
               </li>
               <li class="contacts__item">
                 <span>Телефон</span>
@@ -768,38 +865,42 @@
         <div class="form__container container">
           <div class="form__content">
             <h2 class="form__header visually-hidden">Форма обратной связи</h2>
+            <img src="./img/form-image-desktop.jpg">
             <form action="https://echo.htmlacademy.ru/" method="post">
               <span>Напишите нам</span>
               <p>
                 Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!
               </p>
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" aria-label="Введите ваше имя"
-                minlength="1" oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я]/g,'');" required>
-
-              <label for="phone">Телефон</label>
-              <input type="tel" name="phone" id="phone" aria-label="Введите ваш телефон"
-                oninput="this.value=this.value.replace(/[^0-9,+,(),-]/g,'');" required>
-
+              <div>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" aria-label="Введите ваше имя" minlength="1"
+                  oninput="this.value=this.value.replace(/[^a-zA-Zа-яА-Я]/g,'');" required>
+              </div>
+              <div>
+                <label for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" aria-label="Введите ваш телефон"
+                  oninput="this.value=this.value.replace(/[^0-9,+,(),-]/g,'');" required>
+              </div>
+              <div>
+                <label for="textmessage">Ваше сообщение</label>
+                <textarea name="textmessage" id="textmessage" rows="5"></textarea>
+              </div>
+              <div>
+                <label for="city">Выберите город</label>
+                <select name="city" id="city">
+                  <option value=""></option>
+                  <option value="petersburg">Санкт-Петербург</option>
+                  <option value="samara">Самара</option>
+                  <option value="perm">Пермь</option>
+                  <option value="novosibirsk">Новосибирск</option>
+                </select>
+              </div>
+              <div>
+                <input type="checkbox" id="agreement" required>
+                <label for="agreement">Я согласен на обработку моих персональных данных</label>
+              </div>
               <button class="btn" type="submit">Отправить</button>
             </form>
-
-
-            <!-- <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-              <div class="training-form__row">
-                <div class="training-form__name">
-                  <label class="visually-hidden" for="name">Имя</label>
-                    <input class="training-form__input" type="text" name="name" id="name" placeholder="Имя" minlength="1">
-                  <span class="training-form__span training-form__span--name" style="display: none;">Введите имя</span>
-                </div>
-                <div class="training-form__phone">
-                  <label class="visually-hidden" for="phone">Телефон</label>
-                  <input class="training-form__input" type="tel" name="phone" id="phone" placeholder="Телефон">
-                  <span class="training-form__span training-form__span--tel" style="display: none;">Введите номер телефона</span>
-                </div>
-              </div>
-              <button class="training-form__button btn" type="submit">Отправить</button>
-            </form> -->
           </div>
         </div>
       </section>
@@ -815,7 +916,67 @@
         </div>
       </section> -->
     </main>
-    <footer>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__logo-wrapper">
+          <img src="./img/logo.png">
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a>О проекте</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a>Программы</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a>Как поехать</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a>Отзывы</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a>Новости</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a>Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__socials-list">
+          <li class="footer__social-item">
+            <a>
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#icon-vk"></use>
+              </svg>
+              <span class="visually-hidden">Страница проекта вконтакте</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a>
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#icon-ok"></use>
+              </svg>
+              <span class="visually-hidden">Страница проекта в одноклассниках</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a>
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#icon-reddit"></use>
+              </svg>
+              <span class="visually-hidden">Страница проекта на Reddit</span>
+            </a>
+          </li>
+        </ul>
+        <span class="footer__copyrights">Masa © 2023 Все права защищены</span>
+        <a class="footer__privacy-policy">Политика конфиденциальности</a>
+      </div>
     </footer>
   </div>
 

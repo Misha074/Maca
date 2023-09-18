@@ -8,6 +8,7 @@
 @import "vendor/data-tabs";
 
 @import "vendor/data-accordion";
+@import "vendor/leaflet";
 
 
 // Global
@@ -24,12 +25,15 @@
 // ---------------------------------
 
 @import "blocks/btn";
+@import "blocks/button";
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
 
+@import "blocks/unscrolling.scss";
 @import "blocks/header.scss";
+@import "blocks/nav.scss";
 @import "blocks/intro.scss";
 @import "blocks/slide-main.scss";
 @import "blocks/about.scss";
@@ -43,6 +47,7 @@
 @import "blocks/review";
 @import "blocks/contacts";
 @import "blocks/form";
+@import "blocks/footer";
 
 // ---------------------------------
 
