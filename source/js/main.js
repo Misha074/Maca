@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 
-import {initNavToggle} from './modules/nav-toggle/nav-toggle';
+import './modules/nav-toggle/nav-toggle';
 import {initIntroSwiper} from './modules/swiper-intro/swiper-intro';
 import {initProgramsSwiper} from './modules/swiper-programs/swiper-programs';
 import {initTabs} from './modules/tabs/init-tabs';
@@ -10,6 +10,8 @@ import {initCommonSwiper} from './modules/tabs/swiper-common/swiper-common';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initReviewsSwiper} from './modules/swiper-reviews/swiper-reviews';
 import {initLeaflet} from './modules/leaflet/init-leaflet';
+
+import './modules/scroll/scroll';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  initNavToggle();
   initIntroSwiper();
 
 

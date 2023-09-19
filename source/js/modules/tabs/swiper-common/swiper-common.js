@@ -6,6 +6,14 @@ function initCommonSwiper() {
       nextEl: '.common__navigation-button--next',
       prevEl: '.common__navigation-button--prev',
     },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet(index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
     watchSlidesProgress: true,
     direction: 'horizontal',
     slidesPerView: 1,
@@ -15,7 +23,7 @@ function initCommonSwiper() {
     breakpoints: {
       1200: {
         allowTouchMove: false,
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 32,
       },
     },

@@ -16,11 +16,18 @@
 
 .reviews__slide {}
 
+.reviews__controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .reviews__pagination-wrapper {}
 
 .reviews__pagination.swiper-pagination {
   bottom: 0;
   top: unset;
+  max-width: 1134px;
 }
 
 .reviews__navigation {}

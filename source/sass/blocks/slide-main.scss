@@ -1,10 +1,6 @@
 .slide-main {
-  width: 75%;
-  background-color: $color-default-white;
   position: relative;
   z-index: 2;
-  padding: 30px;
-  border-radius: 0px 30px 30px 0px;
 }
 
 .slide-main__title {
@@ -17,7 +13,24 @@
   line-height: 62px;
 }
 
-.slide-main__row {}
+.slide-main__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+
+.slide-main__row::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/angle.svg');
+  top: 0;
+  right: -20px;
+  transform: rotate(90deg);
+}
 
 .slide-main__more-link-wrapper {}
 
