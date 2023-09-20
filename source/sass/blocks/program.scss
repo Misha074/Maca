@@ -1,0 +1,51 @@
+.program {
+  position: relative;
+}
+
+.program__image-wrapper {}
+
+.program__text-wrapper {
+  position: absolute;
+  bottom: 0;
+  padding: 50px 51px 20px 20px;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.program__title {
+  background-color: $color-default-white;
+  border-radius: 12px 12px 0 0;
+  max-width: 194px;
+  padding: 18px 0 0 18px;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+}
+
+.program__title::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/angle.svg');
+  bottom: 0;
+  right: -20px;
+  transform: rotate(0deg);
+}
+
+.program__row {
+  background-color: $color-default-white;
+  border-radius: 0 12px 12px 12px;
+  padding: 15px 18px 18px;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  min-height: 79px;
+
+  p {
+    margin: auto;
+  }
+}

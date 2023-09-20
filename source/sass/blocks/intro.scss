@@ -9,7 +9,7 @@
   }
 
   .slide-main__row {
-    padding: 0 50px 35px;
+    padding: 0 50px 32px;
     background-color: $color-default-white;
     max-width: 772px;
     border-radius: 0 0 30px 30px;
@@ -17,10 +17,10 @@
     p {
       max-width: 446px;
       margin: 0;
+      margin-top: -5px;
     }
   }
 }
-
 
 .intro__swiper {
   font-size: 0;
@@ -34,8 +34,10 @@
 .intro__slide {
   min-height: 800px;
   height: auto;
-  padding-top: 447px;
+  padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  align-items: end;
   background-size: cover;
   font-size: 16px;
 
@@ -99,6 +101,8 @@
 
 .intro__slide-container {
   position: relative;
+  display: flex;
+  align-items: end;
 }
 
 .intro__slide-mask {
@@ -113,12 +117,31 @@
 .intro__pagination-wrapper {
   position: absolute;
   content: "";
-  width: 100px;
-  height: 30px;
   background-color: $color-default-white;
-  top: 419px;
+  top: -38px;
   z-index: 2;
   border-radius: 20px 20px 0 0;
+  padding: 6px 20px 12px;
 }
 
-.intro__slider-pagination {}
+.intro__slider-pagination {
+  position: relative;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
+}
+
+.intro__slider-pagination::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/angle.svg');
+  bottom: -10px;
+  right: -40px;
+  transform: rotate(0deg);
+}

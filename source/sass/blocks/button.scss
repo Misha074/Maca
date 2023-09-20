@@ -19,6 +19,19 @@
   }
 }
 
+.button--small {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  border: 0;
+
+  .button__circle {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+}
+
 .button__circle {
   width: 46px;
   height: 46px;

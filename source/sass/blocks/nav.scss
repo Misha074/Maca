@@ -7,6 +7,7 @@
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   padding-left: 20px;
+  margin-top: -2px;
 
   .button__circle {
     margin-left: auto;
@@ -126,6 +127,7 @@
 .nav__item.accordion__element {
   border: none;
   width: fit-content;
+  padding: 0;
 }
 
 .nav__item.nav__item.accordion__element.is-active {

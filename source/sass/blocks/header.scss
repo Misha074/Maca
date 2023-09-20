@@ -11,7 +11,7 @@
   transform: translateX(-50%);
 
 
-  padding: 40px 0;
+  padding: 31px 0;
 
   @include vp-1199 {
     width: calc(100% - clamp(45px, $padding-tablet, 100px) * 2);
