@@ -4,45 +4,102 @@
 }
 
 .participate__container {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 12.82%;
-  padding-top: 120px;
-  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 124px;
+  padding-bottom: 107px;
+  padding-right: calc(clamp(83px, $padding-desktop, 100px) + 106px);
+
+  @include vp-1199 {
+    padding: 0 clamp(45px, $padding-tablet, 83px);
+    padding-top: 98px;
+    padding-bottom: 99px;
+    flex-direction: column;
+  }
 }
 
 .participate__column {
+  max-width: 498px;
+
+  @include vp-1199 {
+    max-width: unset;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 26px;
+
+    @include vp-1199 {
+      line-height: 20px;
+      margin-bottom: 36px;
+      max-width: 498px;
+    }
+  }
+
+  img {
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
 }
 
 .participate__header {
   color: $color-default-white;
-  margin-bottom: 42px;
+  margin-bottom: 29px;
+
+  @include vp-1199 {
+    margin-bottom: 28px;
+  }
 }
 
 .participate__title {
   color: $color-default-white;
-  margin-bottom: 46px;
+  margin-bottom: 55px;
+  margin-top: 4px;
+
+  @include vp-1199 {
+    line-height: 28px;
+    font-size: 28px;
+    margin-top: 45px;
+    margin-bottom: 42px;
+  }
 }
 
 .participate__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-left: 20px;
+
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-left: 20px;
+    row-gap: 25px;
+    column-gap: 49px;
+  }
 }
 
 .participate__item {
-  padding: 30px 25px;
-  border: 2px solid $color-default-white;
-  border-radius: 20px;
+  padding: 23px 25px 27px 24px;
+  border: 1px solid $color-default-white;
+  border-radius: 16px;
 
   position: relative;
+
+  @include vp-1199 {
+    width: 46%;
+  }
 
   span {
     position: absolute;
     width: 42px;
     height: 42px;
     left: -21px;
-    top: -21px;
+    top: -16px;
     background-color: $color-cerulean-blue;
     font-size: 22px;
     line-height: 22px;
@@ -54,4 +111,10 @@
 
 .participate__item + .participate__item {
   margin-top: 23px;
+
+  @include vp-1199 {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

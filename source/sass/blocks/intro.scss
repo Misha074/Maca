@@ -1,22 +1,40 @@
 .intro {
-}
 
-.intro__slide {
-  min-height: 800px;
-  height: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-size: cover;
+  .slide-main__title {
+    max-width: 968px;
+    padding: 40px 50px 30px;
+    margin: 0;
+    background-color: $color-default-white;
+    border-radius: 0 30px 30px 0;
+    letter-spacing: -0.5px;
 
-  // @include vp-1199 {
-  //   min-height: 1024px;
-  //   padding-top: 174px;
-  // }
+    @include vp-1199 {
+      max-width: 659px;
+      padding: 32px 40px 23px;
+    }
+  }
 
-  // @include vp-767 {
-  //   min-height: 568px;
-  //   padding-top: 140px;
-  // }
+  .slide-main__row {
+    padding: 0 50px 32px;
+    background-color: $color-default-white;
+    max-width: 772px;
+    border-radius: 0 0 30px 30px;
+
+    @include vp-1199 {
+      max-width: 591px;
+      padding: 0 40px 32px;
+    }
+
+    p {
+      max-width: 446px;
+      margin: 0;
+      margin-top: -5px;
+
+      @include vp-1199 {
+        line-height: 20px;
+      }
+    }
+  }
 }
 
 .intro__swiper {
@@ -29,27 +47,36 @@
 }
 
 .intro__slide {
-  font-size: 16px;
+  min-height: 800px;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
-  align-items: flex-end;
+  align-items: end;
+  background-size: cover;
+  font-size: 16px;
+  background-color: $color-charcoal;
+
+  @include vp-1199 {
+    min-height: 1024px;
+  }
 }
 
+
 .intro__slide--1 {
-  background-color: $color-charcoal;
-  background-image: url("../img/intro-slider/background-1-desktop.jpg");
-  background-position: bottom;
+  background-image: url("../img/intro-slider/background-1-desktop.webp");
 
   @include retina {
-    background-image: url("../img/intro-slider/background-1-desktop@2x.jpg");
+    background-image: url("../img/intro-slider/background-1-desktop@2x.webp");
   }
 
-  // @include vp-1199 {
-  //   background-image: url("../img/header-slider/header-background-1-tablet.webp");
+  @include vp-1199 {
+    background-image: url("../img/intro-slider/background-1-tablet.webp");
 
-  //   @include retina {
-  //     background-image: url("../img/header-slider/header-background-1-tablet@2x.webp");
-  //   }
-  // }
+    @include retina {
+      background-image: url("../img/intro-slider/background-1-tablet@2x.webp");
+    }
+  }
 
   // @include vp-767 {
   //   background-image: url("../img/header-slider/header-background-1-mobile.webp");
@@ -61,34 +88,46 @@
 }
 
 .intro__slide--2 {
-  background-color: $color-charcoal;
-  background-image: url("../img/intro-slider/background-2-desktop.jpg");
-  background-position: bottom;
+  background-image: url("../img/intro-slider/background-2-desktop.webp");
 
   @include retina {
-    background-image: url("../img/intro-slider/background-2-desktop@2x.jpg");
+    background-image: url("../img/intro-slider/background-2-desktop@2x.webp");
+  }
+
+  @include vp-1199 {
+    background-image: url("../img/intro-slider/background-2-tablet.webp");
+
+    @include retina {
+      background-image: url("../img/intro-slider/background-2-tablet@2x.webp");
+    }
   }
 }
 
 .intro__slide--3 {
-  background-color: $color-charcoal;
-  background-image: url("../img/intro-slider/background-3-desktop.jpg");
-  background-position: bottom;
+  background-image: url("../img/intro-slider/background-3-desktop.webp");
 
   @include retina {
-    background-image: url("../img/intro-slider/background-3-desktop@2x.jpg");
+    background-image: url("../img/intro-slider/background-3-desktop@2x.webp");
+  }
+
+  @include vp-1199 {
+    background-image: url("../img/intro-slider/background-3-tablet.webp");
+
+    @include retina {
+      background-image: url("../img/intro-slider/background-3-tablet@2x.webp");
+    }
   }
 }
 
 .intro__slide-container {
   position: relative;
-}
-
-.intro__slide-main {
+  display: flex;
+  align-items: end;
 }
 
 .intro__slide-mask {
-  background: rgba(49, 109, 194, 0.2);;
+  background: rgba(49, 109, 194, 0.2);
+  ;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -98,15 +137,31 @@
 .intro__pagination-wrapper {
   position: absolute;
   content: "";
-  width: 100px;
-  height: 30px;
   background-color: $color-default-white;
-  top: 430px;
-  left: clamp(100px, $padding-desktop, 120px);
+  top: -38px;
   z-index: 2;
   border-radius: 20px 20px 0 0;
+  padding: 6px 20px 12px;
 }
 
 .intro__slider-pagination {
+  position: relative;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
 }
 
+.intro__slider-pagination::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/angle.svg');
+  bottom: -10px;
+  right: -40px;
+  transform: rotate(0deg);
+}

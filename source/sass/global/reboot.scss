@@ -41,6 +41,12 @@ h2 {
   font-weight: 500;
   color: $color-cerulean-blue;
   margin: 0;
+  letter-spacing: -.5px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 50px;
+  }
 }
 
 h3 {
@@ -54,6 +60,7 @@ h3 {
 a {
   color: $color-default-black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 img,

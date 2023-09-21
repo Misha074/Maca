@@ -1,6 +1,11 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
 
+// Здесь я устанавливаю фокус в первый инпут в форме
+let formModal = document.querySelector('.form--modal');
+let firstInput = formModal.getElementsByTagName('input');
+
+
 export class Modals {
   constructor(settings = {}) {
     this._scrollLock = new ScrollLock();
@@ -108,6 +113,8 @@ export class Modals {
   _addListeners(modal) {
     modal.addEventListener('click', this._modalClickHandler);
     document.addEventListener('keydown', this._documentKeydownHandler);
+    // Здесь я устанавливаю фокус в первый инпут в форме
+    firstInput[0].focus();
   }
 
   _removeListeners(modal) {

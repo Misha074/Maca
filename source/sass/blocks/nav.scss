@@ -4,9 +4,10 @@
   width: 100%;
   margin-left: auto;
   transition: all 0.5s;
-  background-color: $color-cerulean-blue;
   color: $color-default-white;
+  background-color: $color-cerulean-blue;
   padding-left: 20px;
+  margin-top: -1px;
 
   .button__circle {
     margin-left: auto;
@@ -126,6 +127,7 @@
 .nav__item.accordion__element {
   border: none;
   width: fit-content;
+  padding: 0;
 }
 
 .nav__item.nav__item.accordion__element.is-active {

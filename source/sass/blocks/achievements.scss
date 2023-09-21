@@ -2,35 +2,62 @@
 
 .achievements__container {
   padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-bottom: 99px;
+  }
 }
 
 .achievements__content {
-  padding: 50px 106px;
+  padding: 92px 106px 56px 126px;
   background-color: $color-cerulean-blue;
   border-radius: 20px;
+
+  @include vp-1199 {
+    padding: 62px 50px 41px 60px;
+  }
 }
 
 .achievements__list {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 50px 32px;
-
+  grid-template-columns: 1fr 1fr;
+  gap: 54px 52px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+
+  @include vp-1199 {
+    gap: 42px 50px;
+  }
 }
 
 .achievements__item {
   display: flex;
-  border: 2px solid $color-default-white;
+  gap: 37px;
+  border: 1px solid $color-default-white;
   border-radius: 16px;
-  padding: 30px 60px;
+  padding: 29px 29px 29px 60px;
   color: $color-default-white;
   position: relative;
 
-  span {
+  @include vp-1199 {
+    padding: 31px 28px 25px 28px;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 264px;
+  }
+
+  span:first-of-type {
     display: block;
     font-size: 26px;
     line-height: 30px;
     text-transform: uppercase;
+    white-space: nowrap;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   span:last-of-type {
@@ -38,7 +65,7 @@
     content: "";
     width: 42px;
     height: 42px;
-    top: -21px;
+    top: -23px;
     left: -21px;
     background-color: #316dc2;
     display: flex;
@@ -52,5 +79,15 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 300;
+    width: fit-content;
+    max-width: 195px;
+  }
+}
+
+.achievements__item:nth-child(2n) {
+  gap: 22px;
+
+  @include vp-1199 {
+    gap: 6px;
   }
 }

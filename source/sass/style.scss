@@ -26,6 +26,7 @@
 
 @import "blocks/btn";
 @import "blocks/button";
+@import "blocks/slider-button.scss";
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
@@ -39,8 +40,11 @@
 @import "blocks/about.scss";
 @import "blocks/achievements.scss";
 @import "blocks/programs.scss";
+@import "blocks/program.scss";
 @import "blocks/participate.scss";
 @import "blocks/news.scss";
+@import "blocks/filter.scss";
+// @import "blocks/common.scss";
 @import "blocks/faq.scss";
 @import "blocks/accordion";
 @import "blocks/reviews";

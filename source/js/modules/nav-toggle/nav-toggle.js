@@ -7,10 +7,6 @@ navList.classList.remove('nav__list--nojs');
 let untouchableBlock = document.querySelector('.header__untouchable-block');
 let body = document.getElementById('body');
 
-function initNavToggle() {
-  // eslint-disable-next-line no-console
-  console.log(1);
-}
 
 function openMenu() {
   navList.classList.remove('nav__list--closed');
@@ -39,7 +35,3 @@ navToggle.addEventListener('click', function () {
     closeMenu();
   }
 });
-
-
-export {initNavToggle};
-

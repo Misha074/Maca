@@ -188,7 +188,8 @@
 :root {
   --swiper-navigation-size: 44px;
   /*
-  --swiper-navigation-color: var(--swiper-theme-color);
+  --swiper-
+  -color: var(--swiper-theme-color);
   */
 }
 .swiper-button-prev,
@@ -320,8 +321,10 @@
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  // background: var(--swiper-pagination-bullet-inactive-color, #000);
+  background-color: transparent;
+  border: 1px solid #316dc2;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
 }
 button.swiper-pagination-bullet {
   border: none;

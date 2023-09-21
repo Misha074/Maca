@@ -1,11 +1,11 @@
 .reviews {}
 
 .reviews__container {
-  padding-bottom: 120px;
+  padding-bottom: 131px;
 }
 
 .reviews__header {
-  margin-bottom: 52px;
+  margin-bottom: 45px;
 }
 
 .reviews__slider {}
@@ -16,14 +16,25 @@
 
 .reviews__slide {}
 
+.reviews__controls-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 29px;
+}
+
 .reviews__pagination-wrapper {}
 
 .reviews__pagination.swiper-pagination {
   bottom: 0;
   top: unset;
+  width: 91.5%;
+  max-width: 1134px;
 }
 
-.reviews__navigation {}
+.reviews__navigation {
+  display: flex;
+  gap: 11px;
+}
 
 .reviews__navigation-button {}
 
