@@ -3,8 +3,13 @@
 }
 
 .about__container {
-  padding-top: 120px;
+  padding-top: 118px;
   padding-bottom: 60px;
+
+  @include vp-1199 {
+    padding-top: 99px;
+    padding-bottom: 60px;
+  }
 }
 
 .about__content {
@@ -12,13 +17,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12.12%;
+
+  @include vp-1199 {
+    display: block;
+  }
 }
 
 .about__column {
-
   p {
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
+
+    @include vp-1199 {
+      margin: 0;
+    }
   }
 }
 
@@ -26,6 +38,12 @@
   p {
     font-size: 22px;
     line-height: 32px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 26px;
+      width: 85%;
+    }
   }
 }
 
@@ -33,17 +51,39 @@
   p {
     font-size: 16px;
     line-height: 26px;
+
+    @include vp-1199 {
+      line-height: 20px;
+      width: 90%;
+    }
   }
 }
 
 .about__header {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
+  margin-top: 5px;
+
+  @include vp-1199 {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .about__title {
-  margin-bottom: 31px;
+  margin-bottom: 33px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-top: 30px;
+    margin-bottom: 23px;
+  }
 }
 
 .about__more-link {
   width: 277px;
+
+  @include vp-1199 {
+    margin-top: 35px;
+  }
 }

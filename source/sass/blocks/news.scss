@@ -1,25 +1,14 @@
 .news {
-}
-
-.news__container {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.news__header {
-  margin-bottom: 52px;
-  text-align: center;
-}
-
-.news {
   .swiper-pagination-bullet {
     width: 32px;
     height: 32px;
     color: rgba($color: $color-cerulean-blue, $alpha: 0.7);
     background-color: transparent;
+    border-color: transparent;
     font-size: 16px;
     line-height: 20px;
     padding-top: 5px;
+    margin: 0 10px !important;
   }
 
   .swiper-pagination-bullet-active {
@@ -28,11 +17,40 @@
   }
 }
 
+.news__container {
+  padding-top: 124px;
+  padding-bottom: 123px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+  }
+}
+
+.news__header {
+  margin-bottom: 46px;
+  text-align: center;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+  }
+}
+
 .news__swiper-wrapper {}
 
 .news__slide {
   width: calc(25.65% - 32px);
   position: relative;
+
+  @include vp-1199 {
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .news__slide--double {
@@ -40,11 +58,15 @@
 
   .news__slide-header {
     max-width: 291px;
-    padding: 18px 18px 6px 0;
+    padding: 13px 18px 2px 0;
   }
 
   .news__slide-row {
     max-width: 389px;
+
+    p {
+      max-width: 325px;
+    }
   }
 }
 
@@ -59,7 +81,7 @@
   overflow-x: clip;
 
   time {
-    padding: 12px 12px 6px 0;
+    padding: 8px 14px 6px 0;
     border-radius: 0 12px 0 0;
     color: $color-cerulean-blue;
     background-color: $color-alabaster;
@@ -99,7 +121,7 @@
   margin: 0;
   font-size: 24px;
   line-height: 26px;
-  padding: 10px 10px 4px 0;
+  padding: 5px 10px 0 0;
   border-radius: 0 12px 0 0;
   position: relative;
 }
@@ -121,14 +143,17 @@
   background-color: $color-alabaster;
   display: flex;
   justify-content: space-between;
-  padding: 13px 18px 16px 0;
+  align-items: center;
+  padding: 9px 18px 12px 0;
   position: relative;
   border-radius: 0 12px 0 0;
 
   p {
     margin: 0;
+    margin-right: 16px;
     font-size: 14px;
     line-height: 18px;
+    max-width: 176px;
   }
 }
 
@@ -140,12 +165,12 @@
   height: 16px;
   background-image: url('../img/angle-cream.svg');
   bottom: 0;
-  right: -16px;
+  right: 0;
   transform: rotate(0deg);
 }
 
 .news__navigation {
   justify-content: space-between;
   display: flex;
-  margin-top: 40px;
+  margin-top: 50px;
 }

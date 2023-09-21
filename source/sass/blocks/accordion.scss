@@ -2,10 +2,10 @@
 
 .accordion__element {
   background-color: transparent;
-  border: 2px solid $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   width: 100%;
-  padding: 50px 40px;
+  padding: 39px;
 }
 
 .accordion__element + .accordion__element {
@@ -15,13 +15,23 @@
 .accordion__element.is-active {
   background-color: $color-cerulean-blue;
   color: $color-default-white;
+  padding-bottom: 32px;
 
   .accordion__button {
-    margin-bottom: 30px;
+    margin-bottom: 13px;
   }
 
   .accordion__button-title {
     color: $color-default-white;
+  }
+
+  .accordion__element-icon-wrapper {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+
+    svg:first-of-type {
+      display: none;
+    }
   }
 }
 
@@ -32,16 +42,30 @@
   padding: 0;
   margin-bottom: 0;
   transition: all 0.5s;
-  justify-content: start;
+  justify-content: space-between;
   text-align: start;
 }
 
 .accordion__button-title {
   font-size: 28px;
   line-height: 34px;
+  width: 75%;
 }
 
-.accordion__element-icon-wrapper {}
+.accordion__element-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  border-radius: 50%;
+
+  svg:last-of-type {
+    display: none;
+  }
+}
 
 .accordion__content {
   font-size: 16px;

@@ -2,11 +2,30 @@
 }
 
 .programs__container {
-  padding-bottom: 120px;
+  padding-bottom: 130px;
+
+  @include vp-1199 {
+    padding-bottom: 108px;
+  }
+}
+
+.programs__header-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .programs__header {
-  margin-bottom: 52px;
+  margin-bottom: 46px;
+  margin-top: 4px;
+
+  @include vp-1199 {
+    margin-top: 0;
+  }
+}
+
+.programs__more-link {
+  width: fit-content;
+  height: fit-content;
 }
 
 .programs__slider {
@@ -27,6 +46,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 28px;
 }
 
 .programs__pagination.swiper-pagination {

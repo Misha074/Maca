@@ -15,11 +15,19 @@
 .program__title {
   background-color: $color-default-white;
   border-radius: 12px 12px 0 0;
-  max-width: 194px;
-  padding: 18px 0 0 18px;
+  min-width: 194px;
+  width: fit-content;
+  padding: 13px 18px 2px 18px;
   font-size: 24px;
   line-height: 26px;
   position: relative;
+
+  @include vp-1199 {
+    min-width: 173px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 13px 17px 3px;
+  }
 }
 
 .program__title::after {
@@ -42,10 +50,24 @@
   line-height: 18px;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   min-height: 79px;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 18px 6px 18px;
+    min-width: 263px;
+    min-height: 77px;
+  }
 
   p {
     margin: auto;
+    max-width: 239px;
+    margin-right: 16px;
+
+    @include vp-1199 {
+      max-width: 181px;
+    }
   }
 }

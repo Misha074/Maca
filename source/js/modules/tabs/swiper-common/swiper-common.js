@@ -14,6 +14,7 @@ function initCommonSwiper() {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
     },
+
     watchSlidesProgress: true,
     direction: 'horizontal',
     slidesPerView: 1,
@@ -21,6 +22,10 @@ function initCommonSwiper() {
     spaceBetween: 0,
     allowTouchMove: true,
     breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+
       1200: {
         allowTouchMove: false,
         slidesPerView: 'auto',

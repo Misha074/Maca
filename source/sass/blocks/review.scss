@@ -1,6 +1,6 @@
 .review {
-  padding: 50px;
-  border: 2px solid $color-cerulean-blue;
+  padding: 50px 50px 42px;
+  border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   color: $color-cerulean-blue;
 }
@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .review__author {
@@ -20,6 +20,7 @@
   span {
     font-size: 18px;
     line-height: 24px;
+    width: 50%;
   }
 }
 
@@ -39,7 +40,8 @@
   span:first-child {
     font-size: 12px;
     line-height: 1em;
-    margin-bottom: 11px;
+    margin-bottom:7px;
+    text-transform: uppercase;
   }
 
   span:last-child {
@@ -54,13 +56,15 @@
 }
 
 .review__text {
-  quotes {
+  blockquote {
     font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 25px;
+    line-height: 26px;
+    margin: 0;
+    margin-bottom: 15px;
   }
 
   p {
+    margin: 0;
     font-size: 16px;
     line-height: 26px;
     color: $color-charcoal;

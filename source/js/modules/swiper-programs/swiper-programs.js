@@ -18,6 +18,12 @@ function initProgramsSwiper() {
     spaceBetween: 0,
     allowTouchMove: true,
     breakpoints: {
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+
       1200: {
         allowTouchMove: false,
         slidesPerView: 3,

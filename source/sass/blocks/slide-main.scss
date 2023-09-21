@@ -11,12 +11,16 @@
 
   font-size: 54px;
   line-height: 62px;
+
+  @include vp-1199 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .slide-main__row {
   display: flex;
   justify-content: space-between;
-  align-items: end;
   position: relative;
 }
 
@@ -32,6 +36,12 @@
   transform: rotate(90deg);
 }
 
-.slide-main__more-link-wrapper {}
+.slide-main__more-link-wrapper {
+  margin-top: 5px;
+
+  @include vp-1199 {
+    margin-top: -1px;
+  }
+}
 
 .slide-main__more-link {}
