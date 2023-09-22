@@ -542,6 +542,7 @@ button.swiper-pagination-bullet {
 .swiper-grid-column > .swiper-wrapper {
   flex-wrap: wrap;
   flex-direction: column;
+  // flex-direction: row;
 }
 .swiper-fade.swiper-free-mode .swiper-slide {
   transition-timing-function: ease-out;

@@ -9,10 +9,22 @@
   padding-left: 20px;
   margin-top: -1px;
 
+  span {
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
   .button__circle {
     margin-left: auto;
     background-color: $color-default-white;
     color: $color-cerulean-blue;
+
+    @include vp-767 {
+      width: 46px;
+      height: 46px;
+    }
 
     svg:first-of-type {
       display: none;
@@ -26,6 +38,10 @@
 
 .nav__toggle--closed {
   width: 47%;
+
+  @include vp-767 {
+    width: 67%;
+  }
 
   .button__circle {
     margin-left: auto;
@@ -69,6 +85,10 @@
   overflow: auto;
   max-height: 100vh;
   background-color: rgba($color-cerulean-blue, $alpha: 1.0);
+
+  @include vp-767 {
+    min-width: 200px;
+  }
 }
 
 .nav__list--closed {

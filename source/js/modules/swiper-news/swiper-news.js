@@ -16,12 +16,28 @@ function initNewsSwiper() {
     },
     watchSlidesProgress: true,
     direction: 'horizontal',
+    grid: {
+      rows: 2,
+    },
     slidesPerView: 1,
     loop: false,
-    spaceBetween: 0,
+    spaceBetween: 20,
     allowTouchMove: true,
     breakpoints: {
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+        },
+      },
+
       1200: {
+        direction: 'horizontal',
+        grid: {
+          rows: 1,
+        },
         allowTouchMove: false,
         slidesPerView: 'auto',
         spaceBetween: 32,

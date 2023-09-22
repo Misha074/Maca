@@ -16,6 +16,11 @@
     font-size: 36px;
     line-height: 44px;
   }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .slide-main__row {
