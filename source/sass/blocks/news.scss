@@ -15,11 +15,22 @@
       height: 26px;
       font-size: 14px;
       line-height: 14px;
+      margin: 0 8px !important;
     }
   }
 
   .swiper-pagination-bullet-active {
     background-color: $color-cerulean-blue;
+    color: $color-default-white;
+  }
+
+  .swiper-pagination-bullet:hover,
+  .swiper-pagination-bullet:focus {
+    border-color: $color-cerulean-blue;
+  }
+
+  .swiper-pagination-bullet:active {
+    background-color: $color-endeavour;
     color: $color-default-white;
   }
 }
@@ -63,18 +74,22 @@
   }
 
   @include vp-767 {
-    margin-top: 21px;
+    margin-top: 18px;
   }
 }
 
 .news__swiper-wrapper {
   @include vp-1199 {
-    max-height: 1050px;
+    // max-height: 1050px;
     max-width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
   }
 
   @include vp-767 {
-    max-height: 700px;
+    // max-height: 700px;
   }
 }
 
@@ -84,10 +99,20 @@
 
   @include vp-1199 {
     text-align: center;
-    width: unset;
     font-size: 18px;
-    background: #fff;
-    height: calc((100% - 30px) / 2) !important;
+    width: 100%;
+  }
+}
+
+.news__slide:nth-child(2n) {
+  .news__slide-text-wrapper {
+    @include vp-1199 {
+      bottom: 30px;
+    }
+
+    @include vp-767 {
+      bottom: 20px;
+    }
   }
 }
 
@@ -96,10 +121,8 @@
 
   @include vp-1199 {
     text-align: center;
-    width: unset;
     font-size: 18px;
-    background: #fff;
-    height: calc((100% - 30px) / 2) !important;
+    width: 100%;
   }
 
   .news__slide-header {
@@ -137,7 +160,21 @@
   }
 }
 
-.news__slide-image-wrapper {}
+.news__slide--desktop-disappear {
+  display: none;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.news__slide-image-wrapper {
+  img {
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
 
 .news__slide-text-wrapper {
   position: absolute;
@@ -171,7 +208,7 @@
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url('../img/angle-cream.svg');
+    background-image: url("../img/angle-cream.svg");
     top: -16px;
     left: 0;
     transform: rotate(0deg);
@@ -183,7 +220,7 @@
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url('../img/angle-cream.svg');
+    background-image: url("../img/angle-cream.svg");
     bottom: 3px;
     right: -16px;
     transform: rotate(0deg);
@@ -221,7 +258,7 @@
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url('../img/angle-cream.svg');
+  background-image: url("../img/angle-cream.svg");
   bottom: 0;
   right: -16px;
   transform: rotate(0deg);
@@ -273,7 +310,7 @@
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url('../img/angle-cream.svg');
+  background-image: url("../img/angle-cream.svg");
   bottom: 0;
   right: 0;
   transform: rotate(0deg);
@@ -289,6 +326,6 @@
   }
 
   @include vp-767 {
-    margin-top: 2px;
+    margin-top: 28px;
   }
 }

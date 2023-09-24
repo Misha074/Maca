@@ -74,6 +74,8 @@
   color: $color-default-white;
   margin-bottom: 55px;
   margin-top: 4px;
+  font-size: 32px;
+  line-height: 36px;
 
   @include vp-1199 {
     line-height: 28px;
@@ -114,7 +116,7 @@
 }
 
 .participate__item {
-  padding: 23px 25px 27px 24px;
+  padding: 23px 25px 23px 24px;
   border: 1px solid $color-default-white;
   border-radius: 16px;
 
@@ -122,6 +124,7 @@
 
   @include vp-1199 {
     width: 46%;
+    padding-bottom: 27px;
   }
 
   @include vp-767 {

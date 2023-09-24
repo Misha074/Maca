@@ -27,10 +27,10 @@ function initNewsSwiper() {
 
       768: {
         slidesPerView: 2,
+        // grid: {
+        //   rows: 2,
+        // },
         spaceBetween: 30,
-        grid: {
-          rows: 2,
-        },
       },
 
       1200: {

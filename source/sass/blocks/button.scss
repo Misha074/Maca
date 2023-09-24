@@ -24,6 +24,40 @@
   }
 }
 
+.button:hover,
+.button:focus {
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+
+  .button__circle {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+
+    svg:first-of-type {
+      display: none;
+    }
+
+    svg:last-of-type {
+      display: block;
+    }
+  }
+}
+
+.button:active {
+  color: rgba($color: $color-default-white, $alpha: 0.7);
+}
+
+.button:disabled {
+  border-color: $color-mischka;
+  color: $color-mischka;
+  background-color: transparent;
+
+  .button__circle {
+    background-color: $color-mischka;
+    color: $color-default-white;
+  }
+}
+
 .button--small {
   width: fit-content;
   height: fit-content;
@@ -34,6 +68,8 @@
     width: 30px;
     height: 30px;
     margin: 0;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
   }
 }
 
@@ -41,8 +77,7 @@
   width: 46px;
   height: 46px;
   background-color: $color-cerulean-blue;
-  color: #fff;
-  margin-left: auto;
+  color: $color-default-white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,5 +88,9 @@
     width: 34px;
     height: 34px;
     margin-left: 20px;
+  }
+
+  svg:last-of-type {
+    display: none;
   }
 }

@@ -22,12 +22,13 @@ function initProgramsSwiper() {
       768: {
         slidesPerView: 'auto',
         spaceBetween: 30,
+        allowTouchMove: true,
       },
 
       1200: {
-        allowTouchMove: false,
         slidesPerView: 3,
         spaceBetween: 32,
+        allowTouchMove: false,
       },
     },
   });

@@ -1,5 +1,3 @@
-.nav {}
-
 .nav__toggle {
   width: 100%;
   margin-left: auto;
@@ -8,6 +6,7 @@
   background-color: $color-cerulean-blue;
   padding-left: 20px;
   margin-top: -1px;
+  outline: none;
 
   span {
     @include vp-767 {
@@ -38,6 +37,8 @@
 
 .nav__toggle--closed {
   width: 47%;
+  background-color: $color-default-white;
+  color: $color-cerulean-blue;
 
   @include vp-767 {
     width: 67%;
@@ -45,8 +46,10 @@
 
   .button__circle {
     margin-left: auto;
-    background-color: $color-default-white;
-    color: $color-cerulean-blue;
+    // background-color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    // color: $color-cerulean-blue;
+    color: $color-default-white;
 
     svg:first-of-type {
       display: block;
@@ -66,6 +69,7 @@
   .button__circle {
     margin-left: auto;
     background-color: $color-cerulean-blue;
+    color: $color-cerulean-blue;
   }
 }
 
@@ -84,7 +88,7 @@
   height: auto;
   overflow: auto;
   max-height: 100vh;
-  background-color: rgba($color-cerulean-blue, $alpha: 1.0);
+  background-color: rgba($color-cerulean-blue, $alpha: 1);
 
   @include vp-767 {
     min-width: 200px;
@@ -94,18 +98,23 @@
 .nav__list--closed {
   height: 0;
   padding: 0 25px;
-  background-color: rgba($color-cerulean-blue, $alpha: 0.0);
+  background-color: rgba($color-cerulean-blue, $alpha: 0);
 }
 
 .nav__list--nojs {
   height: auto;
-  background-color: rgba($color-cerulean-blue, $alpha: 1.0);
+  background-color: rgba($color-cerulean-blue, $alpha: 1);
+  padding: 35px 25px;
 }
 
 .nav__item {
   a {
     text-transform: uppercase;
     color: rgba($color: $color-default-white, $alpha: 0.7);
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   .accordion__button {
@@ -127,6 +136,7 @@
     padding: 0;
     padding-left: 15px;
     list-style-type: none;
+    width: 100%;
 
     li {
       margin-bottom: 16px;
@@ -144,6 +154,18 @@
   }
 }
 
+.nav__item.accordion__element.is-active {
+  padding-bottom: 0;
+}
+
+.nav__subitem {
+  a {
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: unset;
+  }
+}
+
 .nav__item.accordion__element {
   border: none;
   width: fit-content;
@@ -153,18 +175,14 @@
 .nav__item.nav__item.accordion__element.is-active {
   .accordion__button {
     margin-bottom: 20px;
-    color: rgba($color: $color-default-white, $alpha: 1.0);
+    color: rgba($color: $color-default-white, $alpha: 1);
   }
-
-  // .accordion__button-title {
-  //   color: rgba($color: $color-default-white, $alpha: 1.0);
-  // }
 
   svg {
     transform: rotate(180deg);
   }
 }
 
-.nav__item+.nav__item {
+.nav__item + .nav__item {
   margin-top: 28px;
 }

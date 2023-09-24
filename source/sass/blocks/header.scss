@@ -41,3 +41,15 @@
   display: block;
   z-index: 100;
 }
+
+.header__home-link:hover,
+.header__home-link:focus {
+  outline: none;
+  opacity: 0.8;
+  filter: drop-shadow(3px 3px $color-cerulean-blue);
+}
+
+.header__home-link:active {
+  opacity: 1;
+  filter: drop-shadow(3px 3px $color-cerulean-blue);
+}

@@ -1,7 +1,7 @@
 .filter {
   @include vp-767 {
     width: 290px;
-    overflow: hidden;
+    overflow: scroll;
   }
 }
 
@@ -18,6 +18,10 @@
     gap: 0;
     margin-bottom: 1px;
   }
+
+  @include vp-767 {
+    width: fit-content;
+  }
 }
 
 .filter__item {
@@ -29,7 +33,6 @@
   @include vp-767 {
     font-size: 12px;
     line-height: 12px;
-
   }
 }
 
@@ -39,7 +42,15 @@
   opacity: 0.6;
 }
 
+.filter__button:hover,
+.filter__button:focus {
+  opacity: 1;
+  background-color: transparent;
+  color: $color-cerulean-blue;
+}
+
 .filter__button--active {
   border-color: $color-cerulean-blue;
+  color: $color-cerulean-blue;
   opacity: 1;
 }
