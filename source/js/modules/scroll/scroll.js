@@ -40,5 +40,3 @@ let contactsLink = document.getElementById('contacts-link');
 contactsLink.addEventListener('click', () => {
   contacts.scrollIntoView({behavior: 'smooth'}, {block: 'center', inline: 'center'});
 });
-
-

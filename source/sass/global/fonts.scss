@@ -5,7 +5,7 @@
 
   font-display: swap;
   src: url("../fonts/manrope-v14-cyrillic_latin-regular.woff2") format("woff2"),
-  url("../fonts/manrope-v14-cyrillic_latin-regular.woff") format("woff");
+    url("../fonts/manrope-v14-cyrillic_latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 
   font-display: swap;
   src: url("../fonts/manrope-v14-cyrillic_latin-300.woff2") format("woff2"),
-  url("../fonts/manrope-v14-cyrillic_latin-300.woff") format("woff");
+    url("../fonts/manrope-v14-cyrillic_latin-300.woff") format("woff");
 }
 
 @font-face {
@@ -25,7 +25,7 @@
 
   font-display: swap;
   src: url("../fonts/manrope-v14-cyrillic_latin-500.woff2") format("woff2"),
-  url("../fonts/manrope-v14-cyrillic_latin-500.woff") format("woff");
+    url("../fonts/manrope-v14-cyrillic_latin-500.woff") format("woff");
 }
 
 $font-manrope: "Manrope", "Arial", sans-serif;

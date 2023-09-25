@@ -1,11 +1,12 @@
 let nav = document.querySelector('.header__nav');
-
 let navToggle = nav.querySelector('.nav__toggle');
 let navList = nav.querySelector('.nav__list');
-navToggle.classList.remove('nav__toggle--nojs');
-navList.classList.remove('nav__list--nojs');
 let untouchableBlock = document.querySelector('.header__untouchable-block');
 let body = document.getElementById('body');
+
+navToggle.classList.remove('nav__toggle--nojs');
+navList.classList.remove('nav__list--nojs');
+nav.classList.remove('nav--nojs');
 
 
 function openMenu() {

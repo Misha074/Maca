@@ -16,6 +16,11 @@
     font-size: 36px;
     line-height: 44px;
   }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .slide-main__row {
@@ -30,7 +35,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url('../img/angle.svg');
+  background-image: url("../img/angle.svg");
   top: 0;
   right: -20px;
   transform: rotate(90deg);
@@ -43,5 +48,3 @@
     margin-top: -1px;
   }
 }
-
-.slide-main__more-link {}

@@ -17,17 +17,18 @@ function initProgramsSwiper() {
     loop: false,
     spaceBetween: 0,
     allowTouchMove: true,
-    breakpoints: {
 
+    breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 30,
+        allowTouchMove: true,
       },
 
       1200: {
-        allowTouchMove: false,
         slidesPerView: 3,
         spaceBetween: 32,
+        allowTouchMove: false,
       },
     },
   });

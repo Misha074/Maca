@@ -17,13 +17,18 @@ function initCommonSwiper() {
 
     watchSlidesProgress: true,
     direction: 'horizontal',
-    slidesPerView: 1,
+    grid: {
+      rows: 2,
+    },
+    slidesPerView: 3,
     loop: false,
     spaceBetween: 0,
     allowTouchMove: true,
     breakpoints: {
+
       768: {
         slidesPerView: 2,
+        spaceBetween: 30,
       },
 
       1200: {

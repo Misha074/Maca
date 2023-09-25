@@ -2,11 +2,11 @@ function initIntroSwiper() {
   // eslint-disable-next-line no-undef
   let introSwiper = new Swiper('.intro__swiper', {
     // Автоматическое перелистывание слайдов
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: true,
-    //   pauseOnMouseEnter: true,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    },
     // Буллеты пагинации (кликабельные)
     pagination: {
       el: '.swiper-pagination',

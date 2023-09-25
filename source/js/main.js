@@ -6,11 +6,12 @@ import './modules/nav-toggle/nav-toggle';
 import {initIntroSwiper} from './modules/swiper-intro/swiper-intro';
 import {initProgramsSwiper} from './modules/swiper-programs/swiper-programs';
 import {initTabs} from './modules/tabs/init-tabs';
-// import {initCommonSwiper} from './modules/tabs/swiper-common/swiper-common';
 import {initNewsSwiper} from './modules/swiper-news/swiper-news';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initReviewsSwiper} from './modules/swiper-reviews/swiper-reviews';
 import {initLeaflet} from './modules/leaflet/init-leaflet';
+import {inputValidate} from './modules/input-validate/input-validate';
+import {inputValidateModal} from './modules/input-validate-modal/input-validate-modal';
 
 import './modules/scroll/scroll';
 // ---------------------------------
@@ -33,11 +34,12 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initProgramsSwiper();
     initTabs();
-    // initCommonSwiper();
     initNewsSwiper();
     initAccordions();
     initReviewsSwiper();
     initLeaflet();
+    inputValidate();
+    inputValidateModal();
 
     initModals();
     const form = new Form();

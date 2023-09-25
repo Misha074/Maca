@@ -18,6 +18,13 @@ function initReviewsSwiper() {
     spaceBetween: 0,
     allowTouchMove: true,
     breakpoints: {
+
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+
+
       1200: {
         allowTouchMove: false,
         slidesPerView: 2,
